@@ -20,8 +20,12 @@ public class main {
         int [] num= new int[] {2,3,4,5,29,1000,39};
         System.out.println(differenceMaxMin(num));
         System.out.println(isAvgWhole(num));
+        System.out.println("__ ");
         System.out.println(cumulativeSum(num));
+        System.out.println(" __");
         System.out.println(getDecimalPlaces("23.781"));
+        System.out.println(Fibonacci(7));
+        System.out.println(isValid(21442);
 
     }
 
@@ -125,8 +129,26 @@ public class main {
         return ch.length-1;
     }
 
-    //16
+    //16 ??
+    public static int Fibonacci(int fib){
+        int[] num = new int[] { 0, 1, 2};
+        int rfib = 0;
+        for(int i=2; i<fib; i++){
+            num[0]=num[1];
+            num[1]=num[2];
+            num[2]=num[0]+num[1];
+            rfib = num[2];
+        }
 
+        return rfib;
+    }
+
+    //17
+    public static boolean isValid(int index){
+        boolean valid = false;
+
+        return valid;
+    }
 
 
 
