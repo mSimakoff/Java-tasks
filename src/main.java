@@ -21,6 +21,7 @@ public class main {
         System.out.println(differenceMaxMin(num));
         System.out.println(isAvgWhole(num));
         System.out.println(cumulativeSum(num));
+        System.out.println(getDecimalPlaces("23.781"));
 
     }
 
@@ -117,7 +118,14 @@ public class main {
         return arr;
     }
 
-    //15
+    //15 без костылей
+    public static int getDecimalPlaces(String s){
+        s = s.substring(s.indexOf("."));
+        char[] ch=s.toCharArray();
+        return ch.length-1;
+    }
+
+    //16
 
 
 
