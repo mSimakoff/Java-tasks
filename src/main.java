@@ -33,6 +33,9 @@ public class main {
         System.out.println(isSuffix("arachnophobia","phobia-"));
         System.out.println(boxSeq(3));
         System.out.println(boxSeq(6));
+        System.out.println("++++++++++++++3 блок+++++++++++++");
+        System.out.println(solutions(1, 0, 0));
+
 
     }
 
@@ -179,6 +182,17 @@ public class main {
         }
         return Fields;
     }
+
+    //21
+
+    public static int solutions(int a, int b, int c){
+        int D = 0;
+        if (b*b-4*a*c > 0) D = 2;
+        else if (b*b-4*a*c == 0 ) D = 1;
+        return D;
+
+    }
+
 }
 
 
