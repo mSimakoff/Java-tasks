@@ -1,4 +1,5 @@
 //3 6 10
+import java.util.stream.Stream;
 
 import java.sql.Array;
 
@@ -15,6 +16,7 @@ public class main {
         System.out.println(squared(5));
         System.out.println(and(true,false));
         System.out.println(points(13, 12));
+        System.out.println("++++++++++++++2 блок+++++++++++++");
         repeat("example",4);
         System.out.println(" ");
         int [] num= new int[] {2,3,4,5,29,1000,39};
@@ -25,7 +27,12 @@ public class main {
         System.out.println(" __");
         System.out.println(getDecimalPlaces("23.781"));
         System.out.println(Fibonacci(7));
-        System.out.println(isValid(21442);
+        System.out.println(isValid("2144_2"));
+        System.out.println(isStrangePair("sparkling", "groups") );
+        System.out.println(isPrefix("automation","-auto"));
+        System.out.println(isSuffix("arachnophobia","phobia-"));
+        System.out.println(boxSeq(3));
+        System.out.println(boxSeq(6));
 
     }
 
@@ -144,12 +151,34 @@ public class main {
     }
 
     //17
-    public static boolean isValid(int index){
-        boolean valid = false;
-
-        return valid;
+    public static boolean isValid(String index){
+            return (index.length() == 5) && index.matches("[\\d]+");
     }
 
+    //18
+    public static boolean isStrangePair(String s1,String s2){
+        return s1.toLowerCase().charAt(0) == s2.toLowerCase().charAt(s2.length()-1)
+                && s2.toLowerCase().charAt(0) == s1.toLowerCase().charAt(s1.length()-1);
+    }
+    //19
+    public static boolean isPrefix(String word,String prefix){
+        return Stream.of(prefix.replace("-","")).anyMatch(word ::startsWith);
+    }
+    public static boolean isSuffix(String word,String suffix){
+        return Stream.of(suffix.replace("-","")).anyMatch(word ::endsWith);
+    }
 
-
+    //20
+    public static int boxSeq(int step){
+        int Fields=0;
+        for(int i=1; i<=step;i++){
+            if (i %2 !=0)
+                Fields+=3;
+            else
+                Fields-=1;
+        }
+        return Fields;
+    }
 }
+
+
