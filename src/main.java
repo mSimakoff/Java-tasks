@@ -35,6 +35,7 @@ public class main {
         System.out.println(boxSeq(6));
         System.out.println("++++++++++++++3 блок+++++++++++++");
         System.out.println(solutions(1, 0, 0));
+        System.out.println(findZip("all zip files are zipped"));
 
 
     }
@@ -191,6 +192,13 @@ public class main {
         else if (b*b-4*a*c == 0 ) D = 1;
         return D;
 
+    }
+
+    //22
+    public static int findZip(String str){
+        int rcnt = 0;
+
+        return rcnt;
     }
 
 }
