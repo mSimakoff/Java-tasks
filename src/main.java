@@ -1,4 +1,6 @@
 //3 6 10
+import java.util.Arrays;
+import java.util.Locale;
 import java.util.stream.Stream;
 
 import java.sql.Array;
@@ -23,7 +25,7 @@ public class main {
         System.out.println(differenceMaxMin(num));
         System.out.println(isAvgWhole(num));
         System.out.println("__ ");
-        System.out.println(cumulativeSum(num));
+        System.out.println(Arrays.toString(cumulativeSum(num)));
         System.out.println(" __");
         System.out.println(getDecimalPlaces("23.781"));
         System.out.println(Fibonacci(7));
@@ -36,6 +38,9 @@ public class main {
         System.out.println("++++++++++++++3 блок+++++++++++++");
         System.out.println(solutions(1, 0, 0));
         System.out.println(findZip("all zip files are zipped"));
+        System.out.println(isStrangePair("sparkling", "groups") );
+        System.out.println(isStrangePair("", "") );
+
 
 
     }
@@ -128,7 +133,6 @@ public class main {
         for(int i=0; i<arr.length; i++){
             cumSum+=arr[i];
             arr[i]=cumSum;
-            System.out.println(arr[i]);
         }
         return arr;
     }
@@ -161,6 +165,7 @@ public class main {
 
     //18
     public static boolean isStrangePair(String s1,String s2){
+        if (s1 == s2) return true;
         return s1.toLowerCase().charAt(0) == s2.toLowerCase().charAt(s2.length()-1)
                 && s2.toLowerCase().charAt(0) == s1.toLowerCase().charAt(s1.length()-1);
     }
@@ -196,9 +201,8 @@ public class main {
 
     //22
     public static int findZip(String str){
-        int rcnt = 0;
+        return str.toLowerCase().indexOf("zip", str.indexOf("zip")+1);
 
-        return rcnt;
     }
 
 }
