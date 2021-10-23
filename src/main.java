@@ -8,38 +8,90 @@ import java.sql.Array;
 public class main {
 
     public static void main(String[] args) {
+        System.out.println("\nTask 1.1");
         System.out.println(convert(5));
+
+        System.out.println("\nTask 1.4");
         System.out.println(divisibleByFive(5));
+
+        System.out.println("\nTask 1.3");
         System.out.println(footballPoints(5, 0, 2));
+
+        System.out.println("\nTask 1.6");
         System.out.println(howManyWalls(100, 4, 5));
+
+        System.out.println("\nTask 1.10");
         System.out.println(mod(5, 2));
+
+        System.out.println("\nTask 1.9");
         System.out.println(frames(1,1));
+
+        System.out.println("\nTask 1.8");
         System.out.println(profitableGamble(0.2, 50, 9));
+
+        System.out.println("\nTask 1.7");
         System.out.println(squared(5));
+
+        System.out.println("\nTask 1.5");
         System.out.println(and(true,false));
+
+        System.out.println("\nTask 1.2");
         System.out.println(points(13, 12));
-        System.out.println("++++++++++++++2 блок+++++++++++++");
+
+        System.out.println("\n++++++++++++++2 блок+++++++++++++");
+
+        System.out.println("\nTask 2.1");
         repeat("example",4);
-        System.out.println(" ");
+
+        System.out.println("\n\nTask 2.2");
         int [] num= new int[] {2,3,4,5,29,1000,39};
         System.out.println(differenceMaxMin(num));
+
+        System.out.println("\nTask 2.3");
         System.out.println(isAvgWhole(num));
-        System.out.println("__ ");
+
+        System.out.println("\nTask 2.4");
         System.out.println(Arrays.toString(cumulativeSum(num)));
-        System.out.println(" __");
+
+        System.out.println("\nTask 2.5");
         System.out.println(getDecimalPlaces("23.781"));
+
+        System.out.println("\nTask 2.6");
         System.out.println(Fibonacci(7));
+
+        System.out.println("\nTask 2.7");
         System.out.println(isValid("2144_2"));
-        System.out.println(isStrangePair("sparkling", "groups") );
-        System.out.println(isPrefix("automation","-auto"));
-        System.out.println(isSuffix("arachnophobia","phobia-"));
-        System.out.println(boxSeq(3));
-        System.out.println(boxSeq(6));
-        System.out.println("++++++++++++++3 блок+++++++++++++");
-        System.out.println(solutions(1, 0, 0));
-        System.out.println(findZip("all zip files are zipped"));
+
+        System.out.println("\nTask 2.8");
         System.out.println(isStrangePair("sparkling", "groups") );
         System.out.println(isStrangePair("", "") );
+
+        System.out.println("\nTask 2.9");
+        System.out.println(isPrefix("automation","-auto"));
+        System.out.println(isSuffix("arachnophobia","phobia-"));
+
+        System.out.println("\nTask 2.10");
+        System.out.println(boxSeq(3));
+        System.out.println(boxSeq(6));
+
+        System.out.println("\n++++++++++++++3 блок+++++++++++++");
+
+        System.out.println("\nTask 3.1");
+        System.out.println(solutions(1, 0, 0));
+
+        System.out.println("\nTask 3.2");
+        System.out.println(findZip("all zip files are zipped"));
+
+        System.out.println("\nTask 3.3");
+        System.out.println(checkPerfect(6));
+        System.out.println(checkPerfect(28));
+        System.out.println(checkPerfect(496));
+        System.out.println(checkPerfect(12));
+        System.out.println(checkPerfect(97));
+
+        System.out.println("\nTask 3.4");
+
+
 
 
 
@@ -163,7 +215,7 @@ public class main {
             return (index.length() == 5) && index.matches("[\\d]+");
     }
 
-    //18
+    //18 показать
     public static boolean isStrangePair(String s1,String s2){
         if (s1 == s2) return true;
         return s1.toLowerCase().charAt(0) == s2.toLowerCase().charAt(s2.length()-1)
@@ -176,6 +228,8 @@ public class main {
     public static boolean isSuffix(String word,String suffix){
         return Stream.of(suffix.replace("-","")).anyMatch(word ::endsWith);
     }
+
+   // 3 часть
 
     //20
     public static int boxSeq(int step){
@@ -202,8 +256,19 @@ public class main {
     //22
     public static int findZip(String str){
         return str.toLowerCase().indexOf("zip", str.indexOf("zip")+1);
-
     }
+
+    //23
+    public static boolean checkPerfect(int num) {
+         int s = 1;
+         for (int i=2 ; i<=(num / 2) ; i++ ){
+             if ((num%i)==0) s+=i;
+         }
+         return (s==num && num!=1);
+    }
+
+    //24
+
 
 }
 
